@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer: 
+> Answer: Faster load times due to less data being processed. Smooth transitions between "pages"
 
 ## Project Set Up
 
