@@ -1,11 +1,14 @@
-import React from "react";
-import Header from "./components/Header.js";
+import React from "react"
+
+import Header from "./components/Header"
+import WelcomePage from "./components/WelcomePage"
 
 
 export default function App() {
-  return (
-    <main>
-      <Header />
-    </main>
-  );
+    return (
+        <div className="row main centered">
+            <Header />
+            <WelcomePage />
+        </div>
+    )
 }

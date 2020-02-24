@@ -1,16 +1,35 @@
-import React from "react";
+import React from "react"
+import { Route, Link } from 'react-router-dom'
+
+import SearchForm from "./SearchForm"
+import CharList from './CharacterList'
 
 export default function WelcomePage() {
-  return (
-    <section className="welcome-page">
-      <header>
-        <h1>Welcome to the ultimate fan site!</h1>
-        <img
-          className="main-img"
-          src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-          alt="rick"
-        />
-      </header>
-    </section>
-  );
+    return (
+        <div className="row">
+            <div className="col-12">
+                <div className="row">
+                    <div className="col-12 text-center">
+                        <img src="title2.png" alt="sub title - ultimate fan site" />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12">
+                        <nav className="comp-nav">
+                            <Link to="/">Home</Link>
+                            <Link to="/characters">Characters</Link>
+                        </nav>
+                        <Route path="/characters/search" render={renderProps => {
+                            return <SearchForm />
+                        }} />
+                        <Route exact path="/characters" render={renderProps => {
+                            return <CharList />
+                        }} />
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    )
 }
